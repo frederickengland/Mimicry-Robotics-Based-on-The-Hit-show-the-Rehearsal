@@ -1,5 +1,9 @@
+import speech_recognition as sr
+
+
 class Mimicry:
     def __init__(self):
+
         self.good_words = []
         self.bad_words = []
 
@@ -53,13 +57,28 @@ def main():
     array.good_words = load_words("good_words.txt")
     array.bad_words = load_words("bad_words.txt")
 
+    recognizer = sr.Recognizer()
+
     total_score = 0
 
     for question in array.questions:
 
         print("\n" + question)
 
-        answer = input("> ")
+        with sr.Microphone() as source:
+
+            print("Speak now...")
+
+            audio = recognizer.listen(source)
+
+        try:
+            answer = recognizer.recognize_google(audio)
+
+            print("You said:", answer)
+
+        except:
+            answer = ""
+            print("Could not understand audio")
 
         score = score_answer(
             answer,
