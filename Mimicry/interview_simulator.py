@@ -1,4 +1,7 @@
 import speech_recognition as sr
+import pyttsx3
+
+engine = pyttsx3.init()
 
 
 class Mimicry:
@@ -17,6 +20,15 @@ class Mimicry:
 
 
 array = Mimicry()
+
+
+def speak(text):
+
+    print(text)
+
+    engine.say(text)
+
+    engine.runAndWait()
 
 
 def load_words(filename):
@@ -56,6 +68,8 @@ def listen(recognizer):
 
     with sr.Microphone() as source:
 
+        recognizer.adjust_for_ambient_noise(source, duration=1)
+
         audio = recognizer.listen(source)
 
     try:
@@ -84,17 +98,17 @@ def main():
 
     for question in array.questions:
 
-        print("Are you ready? Say yes to continue.")
-
+        speak("Are you ready? Say yes to continue.")
+        speak("speak now")
         reply = listen(recognizer)
 
         if "yes" not in reply:
-            print("Okay, skipping")
+            speak("Okay, skipping")
             continue
 
-        print("\n" + question)
+        speak(question)
 
-        print("Speak now...")
+        speak("Speak now.")
 
         answer = listen(recognizer)
 
@@ -106,18 +120,18 @@ def main():
 
         total_score += score
 
-        print(f"Answer score: {score}")
+        speak(f"Answer score: {score}")
 
-    print("\nFinal interview score:", total_score)
+    speak(f"Final interview score: {total_score}")
 
     if total_score > 5:
-        print("Good job, you did really well... I'm proud of you")
+        speak("Good job, you did really well. I'm proud of you")
 
     elif total_score > 0:
-        print("There were some good points and some bad points")
+        speak("There were some good points and some bad points")
 
     else:
-        print("That was... might need a little more practice")
+        speak("That was. You might need a little more practice")
 
 
 main()
