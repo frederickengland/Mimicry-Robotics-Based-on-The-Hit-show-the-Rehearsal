@@ -267,11 +267,45 @@ def t():
 
 def main():
 
-    g()
-    r()
-    Ev()
-    en()
-    t()
+    print("Are you ready?")
+    reply = input()
+
+    if reply.lower() == "yes":
+        g()
+    else:
+        print("Okay, skipping")
+
+    print("Are you ready?")
+    reply = input()
+
+    if reply.lower() == "yes":
+        r()
+    else:
+        print("Okay, skipping")
+
+    print("Are you ready?")
+    reply = input()
+
+    if reply.lower() == "yes":
+        Ev()
+    else:
+        print("Okay, skipping")
+
+    print("Are you ready?")
+    reply = input()
+
+    if reply.lower() == "yes":
+        en()
+    else:
+        print("Okay, skipping")
+
+    print("Are you ready?")
+    reply = input()
+
+    if reply.lower() == "yes":
+        t()
+    else:
+        print("You're not very good at this")
 
     print("\nFinal interview score:", total_score)
 

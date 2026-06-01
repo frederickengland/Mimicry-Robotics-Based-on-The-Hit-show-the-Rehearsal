@@ -52,6 +52,27 @@ def score_answer(answer, good_words, bad_words):
     return score
 
 
+def listen(recognizer):
+
+    with sr.Microphone() as source:
+
+        audio = recognizer.listen(source)
+
+    try:
+
+        text = recognizer.recognize_google(audio)
+
+        print("You said:", text)
+
+        return text.lower()
+
+    except:
+
+        print("Could not understand audio")
+
+        return ""
+
+
 def main():
 
     array.good_words = load_words("good_words.txt")
@@ -63,22 +84,19 @@ def main():
 
     for question in array.questions:
 
+        print("Are you ready? Say yes to continue.")
+
+        reply = listen(recognizer)
+
+        if "yes" not in reply:
+            print("Okay, skipping")
+            continue
+
         print("\n" + question)
 
-        with sr.Microphone() as source:
+        print("Speak now...")
 
-            print("Speak now...")
-
-            audio = recognizer.listen(source)
-
-        try:
-            answer = recognizer.recognize_google(audio)
-
-            print("You said:", answer)
-
-        except:
-            answer = ""
-            print("Could not understand audio")
+        answer = listen(recognizer)
 
         score = score_answer(
             answer,
