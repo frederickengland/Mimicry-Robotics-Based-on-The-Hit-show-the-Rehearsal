@@ -27,6 +27,8 @@ class GREET:
 
 array = GREET()
 
+total_score = 0
+
 
 def score_Greeting(answer, Greetings):
 
@@ -41,6 +43,7 @@ def score_Greeting(answer, Greetings):
 
     return score
 
+
 def score_Review(answer, Review):
 
     score = 0
@@ -53,6 +56,8 @@ def score_Review(answer, Review):
             score += 1
 
     return score
+
+
 def score_Evaluate(answer, Evaluate):
 
     score = 0
@@ -65,6 +70,8 @@ def score_Evaluate(answer, Evaluate):
             score += 1
 
     return score
+
+
 def score_Enquire(answer, Enquire):
 
     score = 0
@@ -77,6 +84,8 @@ def score_Enquire(answer, Enquire):
             score += 1
 
     return score
+
+
 def score_Thank(answer, Thank):
 
     score = 0
@@ -89,11 +98,13 @@ def score_Thank(answer, Thank):
             score += 1
 
     return score
+
+
 def g():
 
-    recognizer = sr.Recognizer()
+    global total_score
 
-    total_score = 0
+    recognizer = sr.Recognizer()
 
     print("\n" + array.questions[0])
 
@@ -121,21 +132,12 @@ def g():
 
     print(f"Answer score: {score}")
 
-    print("\nFinal interview score:", total_score)
 
-    if total_score > 5:
-        print("Good job, you did really well... I'm proud of you")
-
-    elif total_score > 0:
-        print("There were some good points and some bad points")
-
-    else:
-        print("That was... might need a little more practice")
 def r():
 
-    recognizer = sr.Recognizer()
+    global total_score
 
-    total_score = 0
+    recognizer = sr.Recognizer()
 
     print("\n" + array.questions[1])
 
@@ -163,21 +165,12 @@ def r():
 
     print(f"Answer score: {score}")
 
-    print("\nFinal interview score:", total_score)
 
-    if total_score > 5:
-        print("Good job, you did really well... I'm proud of you")
-
-    elif total_score > 0:
-        print("There were some good points and some bad points")
-
-    else:
-        print("That was... might need a little more practice")
 def Ev():
 
-    recognizer = sr.Recognizer()
+    global total_score
 
-    total_score = 0
+    recognizer = sr.Recognizer()
 
     print("\n" + array.questions[2])
 
@@ -205,22 +198,12 @@ def Ev():
 
     print(f"Answer score: {score}")
 
-    print("\nFinal interview score:", total_score)
-
-    if total_score > 5:
-        print("Good job, you did really well... I'm proud of you")
-
-    elif total_score > 0:
-        print("There were some good points and some bad points")
-
-    else:
-        print("That was... might need a little more practice")
 
 def en():
 
-    recognizer = sr.Recognizer()
+    global total_score
 
-    total_score = 0
+    recognizer = sr.Recognizer()
 
     print("\n" + array.questions[3])
 
@@ -248,22 +231,12 @@ def en():
 
     print(f"Answer score: {score}")
 
-    print("\nFinal interview score:", total_score)
-
-    if total_score > 5:
-        print("Good job, you did really well... I'm proud of you")
-
-    elif total_score > 0:
-        print("There were some good points and some bad points")
-
-    else:
-        print("That was... might need a little more practice")
 
 def t():
 
-    recognizer = sr.Recognizer()
+    global total_score
 
-    total_score = 0
+    recognizer = sr.Recognizer()
 
     print("\n" + array.questions[4])
 
@@ -291,6 +264,15 @@ def t():
 
     print(f"Answer score: {score}")
 
+
+def main():
+
+    g()
+    r()
+    Ev()
+    en()
+    t()
+
     print("\nFinal interview score:", total_score)
 
     if total_score > 5:
@@ -301,11 +283,6 @@ def t():
 
     else:
         print("That was... might need a little more practice")
-def main():
-    g()
-    r()
-    Ev()
-    en()
-    t()
+
 
 main()
