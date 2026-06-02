@@ -1,31 +1,26 @@
+import time
 import pyttsx3
 import speech_recognition as sr
+# Okay so this format works, speak -> listen -> sleep -> speak
 
-engine = pyttsx3.init()
-
-
-def speak():
+def speak(text):
 
     engine = pyttsx3.init()
 
-    print("hello")
+    print(text)
 
-    engine.say("hello")
-
-    engine.runAndWait()
-
-    engine.stop()
-def speak_two():
-    engine = pyttsx3.init()
-    print("Goodbye")
-
-    engine.say("Goodbye")
+    engine.say(text)
 
     engine.runAndWait()
 
     engine.stop()
 
-def listen(recognizer):
+    time.sleep(0.5)
+
+
+def listen():
+
+    recognizer = sr.Recognizer()
 
     with sr.Microphone() as source:
 
@@ -58,26 +53,21 @@ def listen(recognizer):
         return ""
 
 
-def state_one():
+def main():
 
     speak("hello")
 
-
-def state_two():
-
-    recognizer = sr.Recognizer()
-
-    reply = listen(recognizer)
+    reply = listen()
 
     print("Reply was:", reply)
 
-    return reply
+    print("Waiting before speaking again...")
+
+    time.sleep(2)
+
+    speak("goodbye")
+
+    print("Test complete")
 
 
-def main():
-
-    speak()
-
-    reply = state_two()
-    speak_two()
 main()
