@@ -53,21 +53,101 @@ def listen():
         return ""
 
 
+class Mimicry:
+    def __init__(self):
+
+        self.goodwords = [
+            "hello", "goodbye", "how", "are",
+            "you", "what", "is", "your", "name"
+        ]
+
+        self.badwords = [
+            "bad", "hate", "stupid",
+            "dumb", "ugly"
+        ]
+
+        self.questions = [
+            "how are you",
+            "what is your name"
+        ]
+
+
+array = Mimicry()
+
+
+def load_words(filename):
+
+    words = []
+
+    try:
+
+        with open(filename, "r") as file:
+
+            for word in file.read().split():
+
+                words.append(word.lower())
+
+    except FileNotFoundError:
+
+        print(f"File not found: {filename}")
+
+    return words
+
+
+def score_answer(answer, good_words, bad_words):
+
+    score = 0
+
+    if not answer:
+
+        return score
+
+    words = answer.lower().split()
+
+    for word in words:
+
+        if word in good_words:
+
+            score += 1
+
+        if word in bad_words:
+
+            score -= 1
+
+    return score
+
+
 def main():
 
-    speak("hello")
+    total_score = 0
 
-    reply = listen()
+    # Uncomment these later if you want to load from files
+    # array.goodwords = load_words("good_words.txt")
+    # array.badwords = load_words("bad_words.txt")
 
-    print("Reply was:", reply)
+    for question in array.questions:
 
-    print("Waiting before speaking again...")
+        speak(question)
 
-    time.sleep(2)
+        answer = listen()
 
-    speak("goodbye")
+        time.sleep(2)
 
-    print("Test complete")
+        score = score_answer(
+            answer,
+            array.goodwords,
+            array.badwords
+        )
+
+        total_score += score
+
+        print(f"Score for answer: {score}")
+
+        speak(f"Your score was {score}")
+
+    print(f"Final score: {total_score}")
+
+    speak(f"Your final score was {total_score}")
 
 
 main()
