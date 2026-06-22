@@ -5,74 +5,10 @@
 I had this idea over a year ago for a first-year project but lacked the skills and the time to complete it. While I still don't have all the skills, I can at least adjust the scope to make something.
 
 I'm pretty interested in storytelling and using robotics for an experience, so whereas before it was rehearsing the same thing, this is about recreating something fantastical that puts the person in the driving seat of a more full-on, exhilarating experience.
+This is a more experimental phase of the project, allowing me to explore less concrete and rigid concepts and see how far this overarching idea of rehearsal can be pushed into immersive experiences that unfold in real environments. Stage one of the project focuses on demonstrating how certain situations might occur while creating a space where users can practise them and build confidence, primarily through interviews and other controlled scenarios. This phase asks more of the user by presenting them with different themes, storylines, and situations that require engagement, decision-making, and adaptation, allowing the concept of rehearsal to extend beyond practical training into more immersive and thought-provoking experiences.
 
 ## Concepts I Want to Explore
-
-### Judicial Punishment Scenario
-
-#### Death Row Premise
-
-The player is being interrogated on death row for an unknown crime. As the questioning unfolds, the severity and nature of the crime are uncovered. The player must navigate the interrogation, prove their innocence, and uncover the crime they are accused of.
-
-#### Plot Outline
-
-The game opens with narration detailing the victim’s life: their lifespan down to the minute, their business (Boutique Travel or Travel Boutique), their lifestyle, and their absurdly tragic, poetic demise. As the interrogation progresses, the player pieces together what actually happened and whether they were framed or are unknowingly guilty.
-
-#### Gameplay Outline
-
-The player gathers enough information to cast doubt on their guilt. By uncovering inconsistencies in the prosecution’s case, they can stall their execution and push the interrogators to question their innocence.
-
---> This can be done by bringing up certain pieces of evidence, alibis, and key points.
-
-### Revenge Setup (Death Row Part 2)
-
-A son, consumed by envy, orchestrates a scheme that leads to the player’s wrongful arrest. He deflects accountability and has a few glaring red herrings. Manipulative but not smart, this is an easier case.
-
-#### Plot Outline
-
-The interrogation reveals the son’s fractured psyche, showing how he has twisted reality to justify blaming the protagonist. The player must escape both annoyance and constant badgering.
-
-#### Gameplay Outline
-
-Since the antagonist is easily wound up and acting unhinged, his composure quickly deteriorates and allows the player to prod him into a confession.
-
-### Sci-Fi Scenario
-
-The player is one of many clones, each possessing nearly identical memories and responses.
-
-#### Plot Outline
-
-Each clone believes they are the same. But there can only be one killer.
-
-#### Gameplay Outline
-
-This has to make the player question everything they’ve known about the game thus far: matching shoe size, DNA, alibis, etc.
-
-The player must act like the others so as not to arouse suspicion.
-
-### “Planet of the Apes” Parody
-
-The player is the only human in a society ruled by apes. Despite evidence proving their innocence, the apes deny it.
-
-#### Plot Outline
-
-Planet of the Apes. The apes hate humans. The human has to convince the apes they are innocent.
-
-#### Gameplay Outline
-
-The player can only pass this level when they think outside the box and become ape.
-
-### The Reverse Scooby-Doo
-
-The player has spent the entire game uncovering a killer, only to suddenly become the guilty one. With no way out, they must now fabricate a scapegoat.
-
-#### Plot Outline
-
-The real twist is that the player has been gradually pushed into committing the crime without realizing it. With no other suspects left, they must frame the most selfless and altruistic person in the story.
-
-#### Gameplay Outline
-
-The player must construct a compelling lie that turns suspicion onto an innocent person. Winning means becoming the true criminal, successfully manipulating the interrogators into believing the lie.
+I want to explore more thought-provoking and unrealistic scenarios that allow me to experiment with different concepts and methods of execution, such as a horror-themed experience that can play with lighting, or a story-heavy experience that acts like a puppet show that the player is actually inside, using effective but minimalist movements and actuation. The concepts I currently want to explore range from someone on death row trying to prove their innocence, to a revenge plot where the player must not only prove their innocence but also discover who is actually guilty by asking the right questions and presenting the correct alibis. Other ideas include a science-fiction scenario where the player is one of many clones and must behave like the others to avoid arousing suspicion, a Planet of the Apes-inspired scenario where victory comes from "becoming the monkey", and what I call the Reverse Scooby-Doo, where instead of proving your innocence, you are actually guilty and must fabricate a scapegoat by constructing a compelling lie and maintaining it throughout the interrogation.
 
 ## Background
 
