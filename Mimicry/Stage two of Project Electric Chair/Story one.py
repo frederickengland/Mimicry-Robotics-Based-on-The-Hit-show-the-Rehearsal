@@ -115,38 +115,26 @@ def speak(text):
 
 
 def light_on():
-
     arduino.write(b'1')
-
     time.sleep(0.05)
-
     return arduino.readline()
 
 
 def light_off():
-
     arduino.write(b'0')
-
     time.sleep(0.05)
-
     return arduino.readline()
 
 
 def music_start():
-
     arduino.write(b'2')
-
     time.sleep(0.05)
-
     return arduino.readline()
 
 
 def music_off():
-
     arduino.write(b'3')
-
     time.sleep(0.05)
-
     return arduino.readline()
 
 

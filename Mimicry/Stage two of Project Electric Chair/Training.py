@@ -1,8 +1,23 @@
 import speech_recognition as sr
 import time
 import pyttsx3
+import serial
+# Arduino connection
+arduino = serial.Serial(
+    port='COM9',
+    baudrate=115200,
+    timeout=.1
+)
+def light_on():
+    arduino.write(b'1')
+    time.sleep(0.05)
+    return arduino.readline()
 
 
+def light_off():
+    arduino.write(b'0')
+    time.sleep(0.05)
+    return arduino.readline()
 class WHATEVER_IT_TAKES:
     def __init__(self):
         # More inventive and story driven questions
